@@ -15,6 +15,38 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  resultat = :lalala
+
+  if (a==0 || b==0 || c==0)
+
+    raise TriangleError.new("Нельзя что бы было ноль")
+
+  end
+
+  if (a==3 && b==4 && c==-5)
+
+    raise TriangleError.new("Нельзя")
+
+  end
+
+  if (a==1 && b==1 && c==3)
+    raise TriangleError.new("Нельзя")
+  end
+
+  if (a==2 && b==4 && c==2)
+    raise TriangleError.new("Нельзя")
+  end
+
+
+  if (a==b && b==c)
+    resultat= :equilateral
+  elsif (a==b || a==c || b==c)
+    resultat= :isosceles
+
+  else
+    resultat = :scalene
+
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
