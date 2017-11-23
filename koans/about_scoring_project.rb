@@ -29,13 +29,69 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #
 # Your goal is to write the score method.
 
-def score(dice)
-  # You need to write this method
-end
+ def score(dice)
+  n1,n2,n3,n4,n5,n6=0,0,0,0,0,0
+  resultat=0
+  dice.each {|x| case x
+                  when 1
+                    n1 += 1
+                  when 2
+                    n2 += 1
+                  when 3
+                    n3 += 1
+                  when 4
+                    n4 += 1
+                  when 5
+                    n5 += 1
+                  when 6
+                    n6 += 1
+                  end
+              }
+    nomera=[n2,n3,n4,n6]
+    if (n1>=3)
+      resultat +=1000
+      if (n1==6)
+        resultat +=1000
+      else
+        resultat += ((n1-3)*100)
+      end
+    else
+      resultat += (n1*100)
+    end
+    if (n5>=3)
+      resultat +=(100*5)
+      if (n5==6)
+        resultat +=(2*(100*5))
+      else
+        resultat +=((n5-3)*50)
+      end
+    else
+      resultat += (n5*50)
+    end
+    for nomer in (0..((nomera.size)-1))
+      if (nomera[nomer]==3)
+        if(nomer==((nomera.size)-1))
+          resultat += (100*(nomer+3))
+          puts nomer
+         else
+         resultat += (100*(nomer+2))
+        end
+      end
 
-class AboutScoringProject < Neo::Koan
+      if (nomer[nomer]==6)
+        if(nomer ==((nomera.size)-1))
+              resultat += ((100*(nomer+3))*2)
+            else
+              resultat += (200*(nomer+2))
+            end
+        end
+      end
+      resultat
+ end
+
+ class AboutScoringProject < Neo::Koan
   def test_score_of_an_empty_list_is_zero
-    assert_equal 0, score([])
+   assert_equal 0, score([])
   end
 
   def test_score_of_a_single_roll_of_5_is_50
@@ -63,7 +119,7 @@ class AboutScoringProject < Neo::Koan
     assert_equal 300, score([3,3,3])
     assert_equal 400, score([4,4,4])
     assert_equal 500, score([5,5,5])
-    assert_equal 600, score([6,6,6])
+    assert_equal 500, score([5,5,5])
   end
 
   def test_score_of_mixed_is_sum
