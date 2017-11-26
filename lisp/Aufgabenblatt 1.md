@@ -10,7 +10,7 @@
                    (cond
                       ((or (not (listp l)) (null l)) nil)
                       ((and (null (cadr l)) (null (caddr l))) l)
-                      (t (append (derevo2 (cadr l)) (derevo2 (caddr l)) (list (car l))))
+                      (t (append (postorder (cadr l)) (postorder (caddr l)) (list (car l))))
                    )
   )
 
