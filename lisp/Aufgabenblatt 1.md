@@ -30,13 +30,13 @@
  * Inorder
  
   ```lisp  
-  (defun inorder (l)
-               		(cond
-                		((or (not (listp l)) (null l)) nil)
-                    (( and (null (cadr l)) (null (caddr l))) l)
-                    (t (append (inorder (cadr l)) (list (car l)) (inorder (caddr l))))
-                   )
-  )
+   (defun inorder (l)
+               	(cond
+                	((or (not (listp l)) (null l)) nil)
+                  (( and (null (cadr l)) (null (caddr l))) l)
+                  (t (append (inorder (cadr l)) (list (car l)) (inorder (caddr l))))
+                 )
+   )
 
 ```
  
