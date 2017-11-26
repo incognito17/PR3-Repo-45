@@ -9,7 +9,7 @@ Für alle anderen Teilbäume, kann man dieses Schema beibehalten, sodass sich im
 
 Beispiel: 
 
-
+[![Baum](https://github.com/pr3-lecture/repo-45/blob/master/lisp/drv01.png)](http://jquery.com/)
 
 ## Baum-Traversierung
 
