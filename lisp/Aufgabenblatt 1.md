@@ -31,7 +31,7 @@
  
   ```lisp  
    (defun inorder (l)
-               	(cond
+               (cond
                 	((or (not (listp l)) (null l)) nil)
                   (( and (null (cadr l)) (null (caddr l))) l)
                   (t (append (inorder (cadr l)) (list (car l)) (inorder (caddr l))))
