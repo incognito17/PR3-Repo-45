@@ -1,12 +1,31 @@
-#Arbeitsblatt 1
+# Arbeitsblatt 1
 
-## Syntax von jQuery
 
-### $("selector").aktion("Eigenschaften_der_Aktion");
 
->Selector: Elemente, die bearbeitet, manipuliert oder verändert werden sollen (HTML-Elemente).
-* Mehrere Selectoren durch Kommata, mehrere Aktionen durch "."-Schachtelung, sowie mehrere Eigenschaften der Aktionen durch Kommata möglich:
-```jquery  
-  $("selector1, selector2, ... selectorN").aktion.aktion2.aktion3("Eigenschaft1",..."EigenschaftN");
+
+
+* Postorder
+```lisp  
+  (defun postorder (l)
+                   (cond
+                      ((or (not (listp l)) (null l)) nil)
+                      ((and (null (cadr l)) (null (caddr l))) l)
+                      (t (append (derevo2 (cadr l)) (derevo2 (caddr l)) (list (car l))))
+                   )
+  )
+
 ``` 
- >Filter: Elemente, welche die Arbeit mit Selektoren um einiges verfeinern.
+ * Preorder
+ 
+ ```lisp  
+  (defun preorder (l)
+              (cond
+               ((or (not (listp l)) (null l)) nil)
+               ((and (null (cadr l)) (null (caddr l))) l)
+               (t (append (list (car l)) (preorder (cadr l)) (preorder (caddr l))))
+               )
+  )
+
+```
+ 
+ 
