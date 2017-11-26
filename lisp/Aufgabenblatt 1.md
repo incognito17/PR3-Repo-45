@@ -1,5 +1,14 @@
 # Arbeitsblatt 1
 
+## Baum-Darstellung
+Man kann einen binären Baum als Liste folgendermaßen darstellen:
+
+Den Wurzelknoten kann man als das erste Element der Liste wählen, den linken Unterbaum beispielsweise als zweiten und den rechten Unterbaum als dritten und letzten Element.
+
+Für alle anderen Teilbäume, kann man dieses Schema beibehalten, sodass sich immer für jeweils einen (Teil)Baum eine Liste der Länge 3 ergibt. (Falls der Baum nur einen rechten bzw. nur einen linken Teilbaum hat, kann man für den fehlenden Unterbaum eine leere Liste als Element übergeben).
+
+Beispiel: 
+
 
 
 ## Baum-Traversierung
