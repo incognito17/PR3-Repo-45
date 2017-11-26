@@ -11,6 +11,14 @@ Beispiel:
 
 [![](https://github.com/pr3-lecture/repo-45/blob/master/lisp/drv01.png)]()
 
+Mit obiger Beschreibung, lässt sich der oben dargestellte Baum wie folgt als Liste darstellen:
+
+> (7 (3 (2 () ()) (5 () ())) (11 (10 () ()) (12 () (40 () () ))) )
+
+Mit 7 als Wurzelknoten (erstes Element), 3 + geschachtelter linker Unterbaum (zweites Element), 11 + geschachtelter rechter Unterbaum (letztes Element).
+Die fehlenden Knoten eines Blattes, werden als leere Listen --> () <-- dargestellt.
+
+
 ## Baum-Traversierung
 
 * Postorder
