@@ -32,8 +32,15 @@ c) my-length:
 ```
 Die Variable "o" fungiert hier als rest der Liste, welche sich in der "do-Schleife" mit jedem Schritt mit Hilfe von "cdr" bis auf null verkleinert.
 
-
-
+(e) my-reverse:
+```lisp  
+  (defun my-reverse (l)
+    (do ((n (- (list-length l) 1) (- n 1) )
+    (l2 () (append l2 (list (nth n 1)))))
+    ((= n -1) l2)
+    )
+  )
+```
 
 
 ## Baum-Darstellung
