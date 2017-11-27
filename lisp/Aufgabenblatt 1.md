@@ -32,6 +32,16 @@ c) my-length:
 ```
 Die Variable "o" fungiert hier als rest der Liste, welche sich in der "do-Schleife" mit jedem Schritt mit Hilfe von "cdr" bis auf null verkleinert.
 
+d) my-lengthR:
+```lisp  
+   (defun my-lengthR (l)
+     (cond ((null l) 0)
+       ((listp (car l)) (+ (dlinna (car l)) (dlinna (cdr l))))
+       (t (+ 1 (dlinna (cdr l))))
+     )
+   )
+```
+
 (e) my-reverse:
 ```lisp  
   (defun my-reverse (l)
