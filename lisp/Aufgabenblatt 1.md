@@ -9,8 +9,15 @@ a) rotiere:
       (list (car l))
     )
   )
-
 ``` 
+b) neues-vorletztes:
+```lisp  
+  (defun neues-vorletztes (a b)  
+    (append (reverse (cdr (reverse b)))
+            (list a) (last b)
+    )
+  )
+```
 
 
 
