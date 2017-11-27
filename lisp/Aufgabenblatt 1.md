@@ -36,8 +36,8 @@ d) my-lengthR:
 ```lisp  
    (defun my-lengthR (l)
      (cond ((null l) 0)
-       ((listp (car l)) (+ (dlinna (car l)) (dlinna (cdr l))))
-       (t (+ 1 (dlinna (cdr l))))
+       ((listp (car l)) (+ (my-lengthR (car l)) (my-lengthR (cdr l))))
+       (t (+ 1 (my-lengthR (cdr l))))
      )
    )
 ```
