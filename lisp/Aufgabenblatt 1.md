@@ -30,6 +30,7 @@ c) my-length:
     )
   )
 ```
+Die Variable "o" fungiert hier als rest der Liste, welche sich in der "do-Schleife" mit jedem Schritt mit Hilfe von "cdr" bis auf null verkleinert.
 
 
 
