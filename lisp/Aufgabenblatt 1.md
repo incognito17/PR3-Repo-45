@@ -12,9 +12,21 @@ a) rotiere:
 ``` 
 b) neues-vorletztes:
 ```lisp  
-  (defun neues-vorletztes (a b)  
-    (append (reverse (cdr (reverse b)))
-            (list a) (last b)
+  (defun neues-vorletztes (a l)  
+    (append (reverse (cdr (reverse l)))
+            (list a) (last l)
+    )
+  )
+```
+Wobei a das übergebene neue vorletzte Element ist und l die Liste.
+
+c) my-length:
+```lisp  
+  (defun my-length (l)
+    (do ((n 0 (+ n 1))
+         (o l (cdr o))
+        )
+    ((null o) n)
     )
   )
 ```
