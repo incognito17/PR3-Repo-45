@@ -1,5 +1,21 @@
 # Arbeitsblatt 1
 
+## Aufgabe 1:
+
+a) rotiere:
+```lisp  
+  (defun rotiere (l)  
+    (append (cdr l)
+      (list (car l))
+    )
+  )
+
+``` 
+
+
+
+
+
 ## Baum-Darstellung
 Man kann einen binären Baum als Liste folgendermaßen darstellen:
 
