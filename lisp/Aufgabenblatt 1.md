@@ -1,7 +1,7 @@
 # Arbeitsblatt 1
 Gruppe:
-Mario Schmidt 1529889
-Sergej Kryvoruchko 1532130
+  Mario Schmidt 1529889 + 
+Sergej Kryvoruchko 1532130 +
 https://github.com/pr3-lecture/repo-47/tree/master/lisp
 
 ## Aufgabe 1:
