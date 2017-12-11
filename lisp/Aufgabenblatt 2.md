@@ -2,7 +2,7 @@
 
 
 
-
+Size:
 ```Lisp  
       (defun size (l)
            (cond 
@@ -14,3 +14,26 @@
             )
       )
 ```
+isEmpty:
+```Lisp  
+      (defun isEmpty (l)
+            (cond
+                  ((not(listp l)) nil)
+                  ((not(null l)) nil)
+                  (t (True))
+            )
+      )
+```
+getMin: 
+
+iterativ:
+```Lisp
+      (defun minimum (l)
+                  (loop 
+                    (setq r (car l))
+                    (setq l (cadr l))
+                    (cond ((null l) (return r)))
+                   )
+      )
+```
+
