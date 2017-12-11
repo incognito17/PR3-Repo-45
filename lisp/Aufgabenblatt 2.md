@@ -37,3 +37,23 @@ iterativ:
       )
 ```
 
+```Lisp
+      (defun minimum (l)
+                  (loop 
+                    (setq r (car l))
+                    (setq l (cadr l))
+                    (cond ((null l) (return r)))
+                   )
+      )
+```
+
+```Lisp
+      (defun maximum (l)
+                   (loop 
+                    (setq r (car l))
+                    (setq l (caddr l))
+                    (cond ((null l) (return r))
+                   )
+       )
+```
+
