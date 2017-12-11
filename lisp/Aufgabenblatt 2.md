@@ -14,7 +14,7 @@
             )
       )
 ```
-isEmpty:
+**isEmpty:**
 ```Lisp  
       (defun isEmpty (l)
             (cond
@@ -24,7 +24,7 @@ isEmpty:
             )
       )
 ```
-getMin: 
+**getMin:** 
 
 iterativ:
 ```Lisp
@@ -36,17 +36,19 @@ iterativ:
                    )
       )
 ```
-
+rekursiv:
 ```Lisp
+
       (defun minimum (l)
-                  (loop 
-                    (setq r (car l))
-                    (setq l (cadr l))
-                    (cond ((null l) (return r)))
-                   )
+        (cond
+            ((null l) nil)
+            ((null (cadr l))(car l))
+            (t(getMin (cadr l)))
+        )
       )
 ```
-
+**getMax:**
+iterativ
 ```Lisp
       (defun maximum (l)
                    (loop 
@@ -55,5 +57,13 @@ iterativ:
                     (cond ((null l) (return r))
                    )
        )
+```
+rekursiv:
+```Lisp
+     (defun getMax (l)
+            (cond
+                  ((null l) nil)
+                  ((null (caddr l))(car l))
+                  (t(getMax (caddr l)))))
 ```
 
