@@ -24,7 +24,8 @@
             )
       )
 ```
-**getMin:** 
+
+**getMin:**
 
 iterativ:
 ```Lisp
@@ -47,8 +48,10 @@ rekursiv:
         )
       )
 ```
+
 **getMax:**
-iterativ
+
+iterativ:
 ```Lisp
       (defun maximum (l)
                    (loop 
@@ -64,6 +67,36 @@ rekursiv:
             (cond
                   ((null l) nil)
                   ((null (caddr l))(car l))
-                  (t(getMax (caddr l)))))
+                  (t (getMax (caddr l)))))
 ```
 
+**contains:**
+```Lisp
+     (defun contains (a l)
+              (cond
+               ((null (car l)) nil)
+               ((eq a (car l)) (True))
+               ((< a (car l)) (if (null (cadr l))
+                                nil
+                              (contains a (cadr l))))
+               ((> a (car l)) (if (null (caddr l))
+                                  nil
+                                (contains a (caddr l))))
+              )
+     )
+```
+
+**insert:**
+```Lisp
+     (defun vstavit (a l)
+              (cond
+               ((null (car l)) (setf  (car l) (list  a () ())))
+               ((< a (car l)) (if (null (cadr l))
+                                  (setf (cadr l) (list a () ()))
+                                (vstavit a (cadr l))))
+               ((> a (car l)) (if (null (caddr l))
+                                  (setf (caddr l) (list a () ()))
+                                (vstavit a (caddr l))))
+              )
+      )
+```
