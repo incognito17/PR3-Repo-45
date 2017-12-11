@@ -2,7 +2,7 @@
 
 
 
-**Size:
+**Size:**
 ```Lisp  
       (defun size (l)
            (cond 
