@@ -88,15 +88,15 @@ rekursiv:
 
 **insert:**
 ```Lisp
-     (defun vstavit (a l)
+     (defun insert (a l)
               (cond
                ((null (car l)) (setf  (car l) (list  a () ())))
                ((< a (car l)) (if (null (cadr l))
                                   (setf (cadr l) (list a () ()))
-                                (vstavit a (cadr l))))
+                                (insert a (cadr l))))
                ((> a (car l)) (if (null (caddr l))
                                   (setf (caddr l) (list a () ()))
-                                (vstavit a (caddr l))))
+                                (insert a (caddr l))))
               )
       )
 ```
