@@ -1,6 +1,8 @@
 # Arbeitsblatt 2
 
-
+Schmidt, Mario 1529889
+Kryvoruchko, Sergej 1532130
+https://github.com/pr3-lecture/repo-47/blob/master/lisp/lispb2.lsp
 
 **Size:**
 ```Lisp  
