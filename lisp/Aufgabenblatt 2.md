@@ -7,7 +7,7 @@
 
 ### Baum zu Testzwecken:
 
-[![](https://github.com/pr3-lecture/repo-45/blob/master/lisp/drv01.png)]()
+[![](https://github.com/pr3-lecture/repo-45/blob/master/lisp/drv2.png)]()
 
 > (5 (3 (2 () ()) (4 () ())) (7 (6 () ()) (9 (8 () ()) ())))
 
