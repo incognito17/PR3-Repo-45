@@ -113,3 +113,4 @@ rekursiv:
                     )
     l)
 ```
+In dieser Funktion wird die oben definierte "insert" Funktion verwendet. Das File wird aufgemacht und solange es noch nicht zu Ende gelesen wurde, wird diese "insert"-Funktion mit dem ausgelesenen Argument aufgerufen.
