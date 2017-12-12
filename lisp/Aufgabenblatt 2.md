@@ -100,3 +100,16 @@ rekursiv:
               )
       )
 ```
+
+**insert mit file:**
+```Lisp
+     (defun insertF (v l)
+                  (let ((in (open v :if-does-not-exist nil)))
+                    (when in
+                      (loop for result = (read in nil)
+                            while result do (insert result l))
+                            (close in)
+                      )
+                    )
+    l)
+```
