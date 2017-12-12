@@ -5,6 +5,12 @@
 * Kryvoruchko, Sergej 1532130
 * https://github.com/pr3-lecture/repo-47/blob/master/lisp/lispb2.lsp
 
+### Baum zu Testzwecken:
+
+[![](https://github.com/pr3-lecture/repo-45/blob/master/lisp/drv01.png)]()
+
+> (5 (3 (2 () ()) (4 () ())) (7 (6 () ()) (9 (8 () ()) ())))
+
 **Size:**
 ```Lisp  
       (defun size (l)
