@@ -11,6 +11,37 @@
 
 > (5 (3 (2 () ()) (4 () ())) (7 (6 () ()) (9 (8 () ()) ())))
 
+**removeVal:**
+```Lisp 
+(defun removeVal (tree val)
+  (cond
+    (
+      (null (car l))
+        nil
+    )
+    (
+      (and (= val (car l)) (= (height tree) 1))
+        nil
+    )
+    (
+      ( and (= val (car l)) (null (rightTree tree)) )
+        (createTree (getMax (leftTree tree)) (removeVal (leftTree tree) (getMax (leftTree tree))) nil)
+    )
+    (
+      (= val (rootValue tree))
+        (createTree (getMin (rightTree tree)) (leftTree tree) (removeVal (rightTree tree) (getMin (rightTree tree))) )
+    )
+    (
+      (< val (rootValue tree))
+        (createTree (rootValue tree) (removeVal (leftTree tree) val) (rightTree tree))
+    )
+    (
+      (> val (rootValue tree))
+        (createTree (rootValue tree) (leftTree tree) (removeVal (rightTree tree) val))
+    )
+  )
+)
+```
 **Height:**
 ```Lisp  
       (defun height (l)
@@ -24,9 +55,6 @@
          )
       )
 ```
-
-
-
 **Size:**
 ```Lisp  
       (defun size (l)
