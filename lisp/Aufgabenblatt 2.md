@@ -13,31 +13,31 @@
 
 **removeVal:**
 ```Lisp 
-(defun removeVal (l val)
+(defun removeVal (l v)
   (cond
     (
       (null (car l))
         nil
     )
     (
-      (and (= val (car l)) (= (height l) 1))
+      (and (= v (car l)) (= (height l) 1))
         nil
     )
     (
-      ( and (= val (car l)) (null (caddr l)) )
-        (createTree (getMax (cadr tree)) (removeVal (cadr tree) (getMax (cadr tree))) nil)
+      ( and (= v (car l)) (null (caddr l)) )
+        (list (getMax (cadr l)) (removeVal (cadr l) (getMax (cadr l))) nil)
     )
     (
-      (= val (car tree))
-        (createTree (getMin (caddr tree)) (cadr tree) (removeVal (caddr tree) (getMin (caddr tree))) )
+      (= v (car l))
+        (list (getMin (caddr l)) (cadr l) (removeVal (caddr l) (getMin (caddr l))) )
     )
     (
-      (< val (car tree))
-        (createTree (car tree) (removeVal (cadr tree) val) (caddr tree))
+      (< val (car l))
+        (list (car l) (removeVal (cadr l) v) (caddr l))
     )
     (
-      (> val (rootValue tree))
-        (createTree (car tree) (cadr tree) (removeVal (caddr tree) val))
+      (> val (car l))
+        (list (car l) (cadr l) (removeVal (caddr l) v))
     )
   )
 )
