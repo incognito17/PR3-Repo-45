@@ -11,6 +11,22 @@
 
 > (5 (3 (2 () ()) (4 () ())) (7 (6 () ()) (9 (8 () ()) ())))
 
+**Height:**
+```Lisp  
+      (defun height (l)
+         (cond
+           ((null l) 0)
+           (t 
+            (max (+ 1 (height (cadr l)))
+                 (+ 1 (height (caddr l)))
+                 )
+            )
+         )
+      )
+```
+
+
+
 **Size:**
 ```Lisp  
       (defun size (l)
@@ -123,3 +139,9 @@ rekursiv:
     l)
 ```
 In dieser Funktion wird die oben definierte "insert" Funktion verwendet. Das File wird aufgemacht und solange es noch nicht zu Ende gelesen wurde, wird diese "insert"-Funktion mit dem ausgelesenen Argument aufgerufen.
+
+
+
+## Benutzerschnittstelle
+
+Das Benutzerinterface könnte so aussehen, dass z.B. in einer endlos-Schleife dem Benutzer die einzelnen Funktionen des Baums angezeigt werden könnten mit der Eingabeaufforderung diese auszuwählen. Nach dem der Benutzer eine Funktion ausgewählt hat und die Parameter eingegeben hat, wird im das Ergebnis angezeigt. Danach geht die Schleife von vorne los usw.
