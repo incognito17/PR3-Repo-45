@@ -11,6 +11,23 @@
 
 > (5 (3 (2 () ()) (4 () ())) (7 (6 () ()) (9 (8 () ()) ())))
 
+**addAll**
+
+```Lisp 
+(defun addAll (tree otherTree)
+  (cond
+    ((null otherTree) tree)
+    ((null tree) otherTree)
+    (t
+      (setq tree (insert tree (car otherTree)))
+      (setq tree (addAll tree (cadr  otherTree)))
+      (setq tree (addAll tree (caddr otherTree)))
+    )
+  )
+)
+```
+
+
 **removeVal:**
 ```Lisp 
 (defun removeVal (l v)
