@@ -25,7 +25,7 @@ class AboutToStr < Neo::Koan
     def to_s
       "string-like"
     end
-
+    
     def to_str
       to_s
     end
