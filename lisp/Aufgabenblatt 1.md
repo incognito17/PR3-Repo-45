@@ -50,7 +50,7 @@ d) my-lengthR:
 ```lisp  
   (defun my-reverse (l)
     (do ((n (- (list-length l) 1) (- n 1) )
-    (l2 () (append l2 (list (nth n 1)))))
+    (l2 () (append l2 (list (nth n l)))))
     ((= n -1) l2)
     )
   )
